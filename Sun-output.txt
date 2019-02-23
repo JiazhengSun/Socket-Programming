@@ -1,0 +1,46 @@
+./nameChanger mySavings 127.0.0.1 8080 BAL>>output.txt
+mySavings
+Balance is: 40000
+
+./nameChanger myChecking 127.0.0.1 8080 BAL>>output.txt
+myChecking
+Balance is: 50000
+
+./nameChanger myRetirement 127.0.0.1 8080 BAL>>output.txt
+myRetirement
+Balance is: 60000
+
+./nameChanger myCollege 127.0.0.1 8080 BAL>>output.txt
+myCollege
+Balance is: 70000
+
+./nameChanger myCollege 127.0.0.1 8080 WITHDRAW 90000 >>output.txt
+myCollege
+Balance is: Error: Insufficient Funds!
+
+./nameChanger myCollege 127.0.0.1 8080 WITHDRAW 100 >>output.txt
+myCollege
+Balance is: 69900
+
+(Here repeating the withdraw multiple times in short period of time. The number resets after a minute.)
+./nameChanger myCollege 127.0.0.1 8080 WITHDRAW 100 >>output.txt
+myCollege
+Balance is: 69800
+myCollege
+Balance is: Error: Exceed 3 withdraw requests within a minute. Please try again later.
+myCollege
+Balance is: 69600
+myCollege
+Balance is: 69500
+myCollege
+Balance is: 69400
+myCollege
+Balance is: Error: Exceed 3 withdraw requests within a minute. Please try again later.
+myCollege
+Balance is: Error: Exceed 3 withdraw requests within a minute. Please try again later.
+myCollege
+Balance is: Error: Exceed 3 withdraw requests within a minute. Please try again later.
+myCollege
+Balance is: Error: Exceed 3 withdraw requests within a minute. Please try again later.
+myCollege
+Balance is: Error: Exceed 3 withdraw requests within a minute. Please try again later.
